@@ -1,13 +1,18 @@
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
 	<xsl:template match="/">
 		<html>
+			<head>
+				<link href="style.css" type="text/css" rel="stylesheet" />
+			</head>
 			<body>
-				<center><h2>This is a test of xml transofrmation with xsl</h2></center>
+				<h1>Ponctualité mensuelle transilien</h1>
 
 				<xsl:for-each select="ponctualite-transilien/ligne">
 				
-				<table border="1" align = "left" style= "margin: 2.5%">
-					<tr><th colspan ="3"> <xsl:value-of select="@id"/> </th></tr>
+				<table border="1" align = "left" style= "margin: 2.5%" class="table">
+					<tr class="ligne">
+						<th colspan ="3"> <xsl:value-of select="@id"/> (<xsl:value-of select="@nom" />) </th>
+					</tr>
 					<tr bgcolor="gray">
 						<th style="text-align:left">date</th>
 						<th style="text-align:left">ponctualite</th>
