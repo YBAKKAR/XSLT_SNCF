@@ -24,7 +24,7 @@
 								<xsl:value-of select="date"/>
 							</td>
 							<td>
-								<xsl:value-of select="ponctualite"/>
+								<xsl:value-of select="format-number(ponctualite,'###.#')"/>
 							</td>
 							<td>
 								<xsl:value-of select="satisfaction"/>
